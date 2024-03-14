@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+:root {
+  --line-border-fill: #ea64b5;
+  --line-border-empty: #e0e0e0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffeffb;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.progress-container::before {
+  content: "";
+  background: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+}
+
+.progress {
+  background: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.circle {
+  background: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
+
+#progressBar {
+  position: fixed;
+  margin-bottom: 800px;
+}
+
+img {
+  width: 350px;
+  height: 500px;
+  margin: 30px;
+  border-radius: 25px;
+  border: solid 4px #ea64b5;
+}
+
+img:hover {
+  width: 350px;
+  height: 500px;
+  margin: 30px;
+  border-radius: 25px;
+  border: solid 4px #ea64b5;
+  box-shadow: 00px 00px 10px 10px #f3a1da52;
+}
+p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+  font-family: "Calligraffitti", cursive;
+  font-weight: 700;
+  font-size: 7rem;
+  text-shadow: -15px 5px 20px #ced0d3;
+  margin-bottom: 30px;
+  letter-spacing: 0.02em;
+  color: #f9f1cc;
+  text-shadow: 5px 5px 0px #ffb650, 10px 10px 0px #ffd662, 15px 15px 0px #ff80bf,
+    20px 20px 0px #ef5097, 25px 25px 0px #6868ac, 30px 30px 0px #90b1e0;
+}
+
+.firstQustion {
+  display: block;
+}
+
+.secondQustion {
+  display: none;
+}
+
+.thiredtQustion_home {
+  display: none;
+}
+
+.thiredtQustion_inside {
+  display: none;
+}
+
+.thiredtQustion_outside {
+  display: none;
+}
+
+.forthQustion {
+  display: none;
+}
+
+#gif {
+  border: none !important;
+  width: auto;
+  border-radius: 0%;
+  height: auto;
+  position: absolute;
+  bottom: 500px;
+  right: 860px;
+  display: none;
+}
+
+#score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+  font-family: "Calligraffitti", cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  text-shadow: -15px 5px 20px #ced0d3;
+  margin-bottom: 30px;
+  letter-spacing: 0.02em;
+  color: #6868ac;
+  text-shadow: none;
+}
